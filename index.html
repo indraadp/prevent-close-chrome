@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link href="favicon/favicon.png" rel="icon" sizes="192x192" />
+  <link rel="stylesheet" href="style.css">
+  <title>Prevent Close Google Chrome</title>
+  <meta name="description" content="A simple tool to enable notification when closing Google Chrome.">
+  <link rel="canonical" href="https://prevent-close-browser.indraproject.my.id/"/>
+</head>
+
+<body>
+  <main class="center">
+    <section class="card">
+      <h1>Prevent Close Google Chrome</h1>
+
+      <p>
+        Click the button below to enable notification when closing Google Chrome.
+      </p>
+
+      <div class="button">
+        <a id="activate-btn" href="javascript:void(0)">Enable Notification</a>
+      </div>
+
+      <p class="note">
+        <span style="font-weight: bolder;color:#e53935">Note:</span>
+        After clicking the button above, keep this page open.
+      </p>
+
+      <div class="donate">
+        <p>Support Me! 😁👇</p>
+        <a href="https://saweria.co/indradp" target="_blank" rel="nofollow noopener">Saweria</a>
+        &nbsp;|&nbsp;
+        <a href="https://paypal.me/IndraDesiP" target="_blank" rel="nofollow noopener">PayPal</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Create by <a href="https://indradp.web.id/" target="_blank" rel="noopener noreferrer">Indra DP</a>
+  </footer>
+
+  <script>
+    const btn = document.getElementById("activate-btn");
+
+    btn.addEventListener("click", function () {
+      window.addEventListener("beforeunload", function (e) {
+        e.preventDefault();
+        e.returnValue = "";
+      });
+
+      btn.textContent = "Notification Active ✔";
+      btn.classList.add("active");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+:root{--bg:#f3f4f6;--card:#fff;--primary:#0f172a;--secondary:#475569;--border:#d1d5db;--blue:#3b82f6;--green:#22c55e}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;min-height:100dvh;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--primary);background:var(--bg);display:flex;flex-direction:column;text-align:center}
+.center{flex:1;display:flex;align-items:center;justify-content:center;padding:1.5rem}
+.card{width:100%;max-width:720px;background:var(--card);border-radius:16px;padding:2.5rem 2.2rem;border:1px solid var(--border);box-shadow:0 6px 0 #0000000a 0 12px 20px #00000014;animation:fadeUp .4s ease}
+@keyframes fadeUp {
+from{opacity:0;transform:translateY(8px)}
+to{opacity:1;transform:translateY(0)}
+}
+h1{margin:0 0 1rem;font-size:2.1rem;letter-spacing:-.3px}
+p{margin:1.5rem 0;color:var(--secondary);font-size:1.1rem}
+.button{margin:2rem 0}
+.button a{display:inline-block;padding:.8rem 1.7rem;border-radius:10px;background:var(--blue);color:#fff;font-weight:600;text-decoration:none;box-shadow:0 4px 0 #0000001a;transition:all .15s ease}
+.button a:hover{transform:translateY(-1px)}
+.button a:active{transform:translateY(2px);box-shadow:0 2px 0 #00000026}
+.button a.active{background:var(--green)}
+.note{font-size:.9rem}
+.donate{margin-top:3rem;font-size:1rem}
+.donate p{font-weight:600;margin-bottom:.5rem}
+.donate a{font-weight:600;color:var(--blue);text-decoration:none}
+.donate a:hover{text-decoration:underline}
+footer{padding:1rem;font-size:.9rem;color:var(--secondary)}
+footer a{color:var(--primary);text-decoration:none}
+footer a:hover{text-decoration:underline}
+@media (max-width:640px) {
+h1{font-size:1.7rem}
+p{font-size:1rem}
+}
